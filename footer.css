@@ -1,0 +1,78 @@
+@import url('https://fonts.cdnfonts.com/css/lucida-handwriting-std');
+footer {
+    width: 100%;
+  color: var(--white);
+  background-color: var(--bleu);
+  text-align: center;
+}
+footer .contact {
+    margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+footer ul img {
+  width: 15em;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li .description {
+  padding-top: 2rem;
+  font-family: "Lucida Handwriting Std", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.droits {
+  color: var(--white);
+  background-color: var(--bleu);
+  font-size: smaller;
+  text-align: center;
+  padding: 1rem;
+  height: .75rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  footer svg {
+    margin-right: 1em;
+  }
+  footer ul li .phonef,
+  footer ul li .mail,
+  footer ul li .adresse {
+    text-align: left;
+    margin-left: 5em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  footer {
+    padding-top: 2rem;
+    display: flex;gap: 40px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+  footer .contact{
+    font-size: 1.2rem;
+    margin-bottom: .75rem;
+    
+  }
+  footer .adresse{
+    margin-bottom: 0.75rem;
+  }
+  
+}

@@ -1,0 +1,50 @@
+.mainsec {
+  background-image: url(./nettoyage1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+max-width: 100%;
+  width: 100%;
+}
+.mainsec p {
+
+
+  text-shadow: 2px 2px 4px var(--blackShadow);
+text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--maincolor);
+}
+
+/*==MEDIA QUERY==*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .mainsec {
+    padding: 13vh 2vw 5vh 2vw;
+    height: 45vh;
+  }
+  .mainsec p {
+    font-size: 8vw;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .mainsec {
+    padding: 15vh 1vw 5vh 1vw;
+    height: 55vh;
+  }
+  .mainsec p {
+    font-size: 6.5vw;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mainsec {
+    padding: 24vh 5vw 10vh 5vw;
+    height: 88vh;
+  }
+  .mainsec p {
+    font-size: 2vw;
+  }
+}
