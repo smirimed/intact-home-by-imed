@@ -2,7 +2,11 @@
   background-color: var(--grey);
   width: 100%;
 }
-
+.gray{
+  color:var(--bleu) !important;
+  text-shadow: 2px 2px 4px var(--spanShadow);
+  font-family: Arial, Helvetica, sans-serif;
+}
 .services ul li img {
 
   width: 100%;

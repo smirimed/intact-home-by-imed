@@ -1,5 +1,9 @@
 
+.call{
+  
+  display: none;
 
+}
   
   nav{
     position: fixed;
@@ -58,6 +62,9 @@ nav .phone , .phone1{
     
    
 }
+nav div .phone svg{
+  margin-right:  0.75rem ;
+}
 
 nav .phone span a,.phone1 span a{
     animation: blink 1.8s infinite;
@@ -109,8 +116,8 @@ nav .phone span a,.phone1 span a{
 @media screen and (min-width: 1200px) {
    nav .menu-icon {
       display: none ;
-    }
-  
+
+    } 
   }
   
   @media screen and (max-width: 1200px) {
@@ -120,7 +127,33 @@ nav .phone span a,.phone1 span a{
     .menu-icon {
       display: block;
     }
+    .call{
   
+      
+      display: block;
+      top: 27em;
+      right: 1em;
+      z-index: 99;
+      background-color: rgba(255, 255, 255, 0.373);
+      width:3.5rem;
+      height: 3.5rem;
+      color :var(--bleu);
+      border-radius:50%;
+      position: fixed;
+      border: 1px solid var(--bleu);
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      
+    }
+    .call a{
+      text-decoration: none;
+      color: inherit;
+    }
+    .call a svg{
+      transition: transform 0.1s ease-in-out;
+      animation: vibrate 0.5s infinite;
+    }
     nav {
       display: flex;
       flex-direction: row;
@@ -137,3 +170,10 @@ nav .phone span a,.phone1 span a{
     100% { opacity: 1; }
   }
   
+  @keyframes vibrate {
+    0% { transform: translate(0); }
+    25% { transform: translate(-2px, 0px); }
+    50% { transform: translate(2px, -0px); }
+    75% { transform: translate(2px, 0px); }
+    100% { transform: translate(-2px, -0px); }
+  }

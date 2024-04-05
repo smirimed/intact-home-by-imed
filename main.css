@@ -10,7 +10,7 @@ max-width: 100%;
 
 
   text-shadow: 2px 2px 4px var(--blackShadow);
-text-align: center;
+  text-align: center;
   font-weight: bold;
   display: flex;
   justify-content: center;
