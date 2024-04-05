@@ -71,7 +71,7 @@ nav .phone span a,
   top: 80px;
 }
 .filtred {
-  filter: blur(5px);
+  filter: blur(4px);
 }
 .navbar {
   list-style: none;
