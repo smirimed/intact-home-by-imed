@@ -10,6 +10,7 @@ footer .contact {
   font-size: 2rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 4px var(--blackShadow);
 }
 footer ul img {
   width: 15em;
@@ -24,6 +25,7 @@ footer ul li .description {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 600;
+  text-shadow: 2px 2px 4px var(--blackShadow);
 }
 
 .droits {
