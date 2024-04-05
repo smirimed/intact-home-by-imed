@@ -22,6 +22,7 @@ padding: 0;
   --white: #ffff;
   --grey: #f7f7f7;
   --bleu: rgb(13 110 253);
+  --bleunavbar:rgba(13, 109, 253, 0.452);
   --cyan: #61dafb;
   --darkGrey: #282c34;
   --blackShadow: rgba(0, 0, 0, 0.8);

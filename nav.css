@@ -1,180 +1,201 @@
-
-.call{
-  
+.call {
   display: none;
-  
-
 }
-  
-  nav{
-    position: fixed;
-    top:0;
-    left: 50%;
-    transform: translateX(-50%);
-    width:80%;
-    height:5rem;
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 5rem;
   background-color: var(--bleu);
-    border-radius: 0 0 5px  5px;
-    z-index: 99 ;
- display: flex;
-    justify-content: space-between;
-    align-items: center;
- font-size: 1rem;
- padding: 0 1rem;
-
- 
-
-  }
-
-nav .nav-menu{
-    display: flex;
-    justify-content: space-between;
-align-items: center;
-
-    width:40%;
+  border-radius: 0 0 5px 5px;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0 1rem;
 }
-    nav .nav-menu a, nav .navbar a{ 
-      width: fit-content;
-    padding-top:1.9em;
-    color:var(--white);
-    position: relative;
-    text-shadow: 2px 2px 4px var(--blackShadow);
-        text-align: center;
-    z-index: 1;
+
+nav .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 40%;
+}
+nav .nav-menu a,
+nav .navbar ul li a {
+  width: fit-content;
+  padding-top: 1.9em;
+  color: var(--white);
+  position: relative;
+  text-shadow: 2px 2px 4px var(--blackShadow);
+  text-align: center;
+  z-index: 1;
 }
 .menu-icon {
-    fill: var(--white);
-    width: 3rem;
-    height: 2rem;
-  }
-nav #logo{
-    width:12em;
+  fill: var(--white);
+  width: 3rem;
+  height: 2rem;
 }
-nav .phone , .phone1{
-    margin-top:0.7em;
-    font-weight: bold;
-    color :var(--bleu);
-    text-align: center;
-    padding: 8px;
-    border-radius: 8px;
-    background-color: var(--white);
-    
-   
+nav #logo {
+  width: 12em;
 }
-nav div .phone svg{
-  margin-right:  0.75rem ;
+nav .phone,
+.phone1 {
+  margin-top: 0.7em;
+  font-weight: bold;
+  color: var(--bleu);
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+nav div .phone svg {
+  margin-right: 0.75rem;
 }
 
-nav .phone span a,.phone1 span a{
-    animation: blink 1.8s infinite;
-    font-size: 1.2rem;
-    color:var(--red);
-    text-shadow: none;
-    font-family:  Arial, sans-serif;
+nav .phone span a,
+.phone1 span a {
+  animation: blink 1.8s infinite;
+  font-size: 1.2rem;
+  color: var(--red);
+  text-shadow: none;
+  font-family: Arial, sans-serif;
+}
+.navbar.active {
+  top: 80px;
+}
+.filtred {
+  filter: blur(5px);
+}
+.navbar {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: -400px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 1rem; */
+  background-color: var(--bleunavbar);
+  width: 100%;
+  color: var(--white);
+  /* padding-bottom: 2rem; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px var(--blackShadow);
+}
+.navbar li {
+  padding: 1rem;
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* border-bottom: 2px solid black; */
+  border-bottom: 3px solid rgba(128, 128, 128, 0.523);
+}
+.navbar li a {
+  color: var(--white);
+}
+nav a::before {
+  content: "";
+  width: 0;
+  height: 5%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+nav a:hover {
+  font-weight: 600;
+}
+/*==MEDIA QUERY FOR NAVBAR==*/
+@media screen and (min-width: 1200px) {
+  nav .menu-icon {
+    display: none;
   }
-  .navbar.active {
-    top: 80px;
-  }
-  .filtred{
-    filter:blur(3px);
+}
+
+@media screen and (max-width: 1200px) {
+  nav > .nav-menu,
+  .phone {
+    display: none;
   }
   .navbar {
-    position: absolute;
-    top: -400px;
-    left: 0;
-    right: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+  }
+
+  .call {
+    display: block;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.373);
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
-    justify-content:center;
-    padding: 1rem;
-    background-color: var(--bleu);
+    justify-content: center;
+  }
+  .call a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .call a svg {
+    transition: transform 0.1s ease-in-out;
+    animation: vibrate 0.5s infinite;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
     width: 100%;
-    color: var(--white);
-    padding-bottom: 2rem;
   }
-  nav a::before{
-    content: "";
-    width: 0;
-    height: 5%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color:var(--white);
-    transition: all .5s ease;
-    z-index: -1;
-    
- }
-  
- nav a:hover::before{
-    width: 100%;
-    
- }
- nav a:hover{
-   font-weight: 600;
-    
- }
-  /*==MEDIA QUERY FOR NAVBAR==*/
-@media screen and (min-width: 1200px) {
-   nav .menu-icon {
-      display: none ;
+}
 
-    } 
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
-  
-  @media screen and (max-width: 1200px) {
-    nav > .nav-menu, .phone {
-      display: none ;
-    }
-    .menu-icon {
-      display: block;
-    }
-   
-    .call{
-  
-      
-      display: block;
-      z-index: 99;
-      background-color: rgba(255, 255, 255, 0.373);
-      width:3rem;
-      height: 3rem;
-      color :white;
-      border-radius:50%;
-      display: flex ;
-      align-items: center ;
-      justify-content:center ;
-      
-      
-    }
-    .call a{
-      text-decoration: none;
-      color: inherit;
-    }
-    .call a svg{
-      transition: transform 0.1s ease-in-out;
-      animation: vibrate 0.5s infinite;
-    }
-    nav {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 1rem;
-      width: 100%;
-    }
-  
+  50% {
+    opacity: 0.5;
   }
+  100% {
+    opacity: 1;
+  }
+}
 
-  @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
   }
-  
-  @keyframes vibrate {
-    0% { transform: translate(0); }
-    25% { transform: translate(-2px, 0px); }
-    50% { transform: translate(2px, -0px); }
-    75% { transform: translate(2px, 0px); }
-    100% { transform: translate(-2px, -0px); }
+  25% {
+    transform: translate(-2px, 0px);
   }
+  50% {
+    transform: translate(2px, -0px);
+  }
+  75% {
+    transform: translate(2px, 0px);
+  }
+  100% {
+    transform: translate(-2px, -0px);
+  }
+}
