@@ -6,49 +6,65 @@
 max-width: 100%;
   width: 100%;
 }
-.mainsec  h1{
+.mainsec h1 {
 
 
-  text-shadow: 2px 2px 5px var(--blackShadow);
-  text-align: center;
+  text-shadow: 2px 2px 4px var(--blackShadow);
+text-align: center;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white);
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-
+  color: var(--maincolor);
 }
 
-
 /*==MEDIA QUERY==*/
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   .mainsec {
     padding: 13vh 2vw 5vh 2vw;
     height: 45vh;
   }
-  .mainsec  h1{
-    font-size: 2rem;
+  .mainsec h1 {
+    font-size: 8vw;
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .mainsec {
     padding: 15vh 1vw 5vh 1vw;
     height: 55vh;
   }
-  .mainsec p {
+  .mainsec h1 {
     font-size: 6.5vw;
   }
 }
-
-@media screen and (min-width: 769px) {
+/* Styles pour les tablettes en mode portrait */
+@media only screen and (min-width: 768px) and (max-width: 899px) {
   .mainsec {
-    padding: 24vh 5vw 10vh 5vw;
-    height: 88vh;
+    padding: 20vh 5vw 10vh 5vw;
+    height: 70vh;
   }
-  .mainsec h1{
-    font-size: 2rem;
+  .mainsec h1 {
+    font-size: 6vw;
+  }}
+
+/* Styles pour les tablettes en mode paysage */
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .mainsec {
+    padding: 20vh 5vw 10vh 5vw;
+    height: 70vh;
   }
-}
+  .mainsec h1 {
+    font-size: 5vw;
+  }}
+  @media only screen and (min-width: 1201px) {
+    .mainsec {
+      padding: 20vh 15vw 10vh 15vw;
+      height: 88vh;
+    }
+    .mainsec h1 {
+      font-size: 2vw;
+    }}
+  
+
+

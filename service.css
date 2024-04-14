@@ -49,8 +49,9 @@
   display: none;
 }
 .toggle-button,.toggle-button1,.toggle-button2{display: none;}
+
 /*==MEDIA QUERY==*/
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media  only screen and (min-width: 320px) and (max-width: 480px) {
   .services ul {
     flex-direction: column;
   }
@@ -69,7 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 60px; */
+    gap: 60px;
   }
   .toggle-button,.toggle-button1,.toggle-button2{
     display: block;
@@ -92,11 +93,9 @@
   }
   .paragraph, .paragraph1, .paragraph2 {
     display: none;}
-  
-  
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
   .services ul {
     flex-direction: column;
   }
@@ -116,15 +115,96 @@
     align-items: center;
     gap: 60px;
   }
-  
+  .services ul li img {
+
+height: 60vh;  
+  }
+}
+/* Styles pour les tablettes en mode portrait */
+@media only screen and (min-width: 769px) and (max-width: 899px) {
+  .services ul {
+    flex-direction: column;
+  }
+  .services ul li ul li:first-child {
+    font-size: 4vh;
+  }
+  .services ul li ul {
+    padding: 2vh 5vw;
+  }
+  #matelas {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  .services ul li img {
+
+height: 60vh;  
+  }
 }
 
-@media screen and (min-width: 769px) {
+/* Styles pour les tablettes en mode paysage */
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .services ul {
+    flex-direction: column;
+  }
+  .services ul li ul li:first-child {
+    font-size: 4vh;
+  }
+  .services ul li ul {
+    padding: 2vh 5vw;
+  }
+  #matelas {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  .services ul li img {
+
+height: 60vh;  
+  }}
+  @media only screen and (min-width: 1021px) and (max-width: 1300px) {
+    .services ul {
+      flex-direction: column;
+    }
+    .services ul li ul li:first-child {
+      font-size: 4vh;
+    }
+    .services ul li ul {
+      padding: 2vh 5vw;
+    }
+    #matelas {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .services {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+    .services ul li img {
+  
+  height: 60vh;  
+    }}
+
+@media only screen and (min-width: 1301px)  {
   .services ul li {
     width: 50%;
   }
 
-
+  .services{
+    max-width: 100%;
+  }
   .services ul li ul li {
     width: 100%;
     margin-top: 3rem;
